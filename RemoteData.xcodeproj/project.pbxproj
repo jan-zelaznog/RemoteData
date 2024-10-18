@@ -13,6 +13,10 @@
 		3D6BC1762CBAD8F500863919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6BC1742CBAD8F500863919 /* Main.storyboard */; };
 		3D6BC1782CBAD8F800863919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6BC1772CBAD8F800863919 /* Assets.xcassets */; };
 		3D6BC17B2CBAD8F800863919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6BC1792CBAD8F800863919 /* LaunchScreen.storyboard */; };
+		3D6BC1842CBAD95700863919 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6BC1832CBAD95700863919 /* Network.framework */; };
+		3D6BC1862CBAD9D800863919 /* InternetMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6BC1852CBAD9D800863919 /* InternetMonitor.swift */; };
+		3D6BC1882CBAECCC00863919 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6BC1872CBAECCC00863919 /* WebKit.framework */; };
+		3D6BC18A2CBB03FD00863919 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6BC1892CBB03FD00863919 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3D6BC1772CBAD8F800863919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D6BC17A2CBAD8F800863919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D6BC17C2CBAD8F800863919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D6BC1832CBAD95700863919 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		3D6BC1852CBAD9D800863919 /* InternetMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetMonitor.swift; sourceTree = "<group>"; };
+		3D6BC1872CBAECCC00863919 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3D6BC1892CBB03FD00863919 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6BC1882CBAECCC00863919 /* WebKit.framework in Frameworks */,
+				3D6BC1842CBAD95700863919 /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				3D6BC16D2CBAD8F500863919 /* RemoteData */,
 				3D6BC16C2CBAD8F500863919 /* Products */,
+				3D6BC1822CBAD95700863919 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,19 @@
 				3D6BC1772CBAD8F800863919 /* Assets.xcassets */,
 				3D6BC1792CBAD8F800863919 /* LaunchScreen.storyboard */,
 				3D6BC17C2CBAD8F800863919 /* Info.plist */,
+				3D6BC1852CBAD9D800863919 /* InternetMonitor.swift */,
+				3D6BC1892CBB03FD00863919 /* DataManager.swift */,
 			);
 			path = RemoteData;
+			sourceTree = "<group>";
+		};
+		3D6BC1822CBAD95700863919 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D6BC1872CBAECCC00863919 /* WebKit.framework */,
+				3D6BC1832CBAD95700863919 /* Network.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D6BC1732CBAD8F500863919 /* ViewController.swift in Sources */,
+				3D6BC18A2CBB03FD00863919 /* DataManager.swift in Sources */,
+				3D6BC1862CBAD9D800863919 /* InternetMonitor.swift in Sources */,
 				3D6BC16F2CBAD8F500863919 /* AppDelegate.swift in Sources */,
 				3D6BC1712CBAD8F500863919 /* SceneDelegate.swift in Sources */,
 			);
@@ -300,6 +324,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +353,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
